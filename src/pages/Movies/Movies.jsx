@@ -46,6 +46,7 @@ const Movies = () => {
     const form = event.target;
     setSearchParams({ movieQuery: form.elements.search.value.trim() });
     setMovies([]);
+    setError(false);
 
     form.reset();
 
