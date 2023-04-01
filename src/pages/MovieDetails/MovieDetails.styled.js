@@ -5,7 +5,7 @@ padding: 16px;
 display: flex;
 align-items: flex-start;
 gap: 16px;
-max-width: 80%;
+/* max-width: 80%; */
 
 `
 export const StyledAdditionalDiv = styled.div`

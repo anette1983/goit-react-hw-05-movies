@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 // import styled from 'styled-components';
-import { StyledHeader, StyledNavLink } from './Layout.styled';
+import { StyledContainer, StyledHeader, StyledNavLink } from './Layout.styled';
 
 // const StyledNavLink = styled(NavLink)`
 //   color: #212121;
@@ -29,12 +29,14 @@ const Layout = () => {
           </ul>
         </nav>
       </StyledHeader>
-      <main>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Outlet />
-        </Suspense>
-      </main>
-      <footer></footer>
+      <StyledContainer>
+        <main>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Outlet />
+          </Suspense>
+        </main>
+        <footer></footer>
+      </StyledContainer>
     </>
   );
 };
